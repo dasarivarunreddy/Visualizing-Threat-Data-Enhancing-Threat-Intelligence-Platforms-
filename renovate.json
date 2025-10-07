@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "baseBranches": [
+    "master",
+    "opensearch"
+  ],
+  "extends": [
+    "config:recommended"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "prConcurrentLimit": 2,
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "prPriority": 5
+    }
+  ]
+}
