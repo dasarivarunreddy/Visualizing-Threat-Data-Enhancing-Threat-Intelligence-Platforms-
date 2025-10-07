@@ -1,21 +1,54 @@
-# OpenCTI Docker deployment
+## Visualizing Threat Data: Enhancing Threat Intelligence Platforms
+## Project Overview
 
-## Documentation
+This project is our final year cybersecurity capstone, focused on visualizing and analyzing cyber threat data to enhance threat intelligence. We leveraged OpenCTI as the foundation but extended it significantly by:
 
-You can find the detailed documentation about the Docker installation in the [OpenCTI documentation space](https://docs.opencti.io/latest/deployment/installation/#using-docker).
+Creating custom visual dashboards for threat trends, malware campaigns, and attacker activity.
 
-## Community
+Configuring and integrating multiple connectors for automated ingestion from STIX files, CSV/TXT datasets, AlienVault, and internal threat reports.
 
-### Status & bugs
+Implementing Dockerized multi-service orchestration, including Redis, Elasticsearch, RabbitMQ, MinIO, and OpenCTI workers, to handle scalable and real-time data processing.
 
-Currently OpenCTI is under heavy development, if you wish to report bugs or ask for new features, you can directly use the [Github issues module](https://github.com/OpenCTI-Platform/opencti/issues).
+Automating alerts and anomaly detection workflows to highlight suspicious activity.
 
-### Discussion
+This project demonstrates our hands-on experience in deploying, configuring, and extending real-world threat intelligence platforms and our understanding of the end-to-end cybersecurity data pipeline.
 
-If you need support or you wish to engage a discussion about the OpenCTI platform, feel free to join us on our [Slack channel](https://community.filigran.io). You can also send us an email to contact@opencti.io.
+## Key Contributions
 
-## About
+Custom Visualizations: Designed dashboards that highlight emerging threats, attack patterns, and high-risk indicators.
 
-OpenCTI is a product designed and developed by the company [Filigran](https://filigran.io).
+Connector Management: Configured, monitored, and automated data ingestion from multiple sources, including STIX files, CSV, TXT, AlienVault, and internal datasets.
 
-<a href="https://filigran.io" alt="Filigran"><img src="https://github.com/OpenCTI-Platform/opencti/raw/master/.github/img/logo_filigran.png" width="300" /></a>
+Data Processing Pipelines: Implemented scalable worker and queue processing to analyze, enrich, and correlate threat data in real time.
+
+System Orchestration: Built a Docker Compose setup with multiple integrated services ensuring reliability, health checks, and automated restarts.
+
+Reporting & Exporting: Added functionality to export threat intelligence in CSV, TXT, and STIX formats for further analysis.
+
+## Features
+
+Aggregated Threat Intelligence: Collects data from multiple sources and standardizes it for analysis.
+
+Interactive Dashboards: Custom charts and visualizations for malware campaigns, threat actors, and indicators.
+
+Real-Time Monitoring: Detects new threats as they appear using automated ingestion and worker pipelines.
+
+Anomaly Detection: Highlights unusual patterns or spikes in threat activity.
+
+Scalable Architecture: Supports replication of workers and connectors for high-throughput environments.
+
+Secure & Configurable: Fully configurable via environment variables and secure access keys.
+
+## Installation & Usage
+
+Clone the repository:
+
+git clone https://github.com/yourusername/threat-visualization.git
+cd threat-visualization
+
+
+Configure environment variables in .env for MinIO, RabbitMQ, OpenCTI, SMTP, and connectors.
+
+Start the platform:
+
+docker-compose up -d
